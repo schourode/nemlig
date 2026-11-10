@@ -9,6 +9,4 @@ def get_basic_order_history(skip=0, take=10):
 
 
 def get_order_history(order_number):
-    return webapi.get('/order/GetOrderHistory', params={
-        'orderNumber': order_number,
-    })
+    return webapi.get(f'/v2/order/GetOrderHistory/{order_number}')
